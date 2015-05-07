@@ -1,6 +1,6 @@
---- ./CMakeGlobals.txt.orig	2013-12-13 18:25:39.000000000 -0500
-+++ ./CMakeGlobals.txt	2013-12-13 18:37:58.000000000 -0500
-@@ -99,7 +99,7 @@
+--- CMakeGlobals.txt.orig	2015-03-06 22:12:51 UTC
++++ CMakeGlobals.txt
+@@ -99,7 +99,7 @@ endif()
  if (APPLE AND RSTUDIO_DESKTOP)
     set(RSTUDIO_INSTALL_BIN RStudio.app/Contents/MacOS)
     set(RSTUDIO_INSTALL_SUPPORTING RStudio.app/Contents/Resources)
@@ -9,7 +9,7 @@
     if (RSTUDIO_SESSION_WIN64)
       set(RSTUDIO_INSTALL_BIN x64)
     else()
-@@ -113,7 +113,7 @@
+@@ -113,7 +113,7 @@ if(UNIX)
     if(${CMAKE_INSTALL_PREFIX} STREQUAL "/usr/local")
        if(APPLE AND RSTUDIO_DESKTOP)
           set(CMAKE_INSTALL_PREFIX "/Applications")

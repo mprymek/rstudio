@@ -1,6 +1,15 @@
---- ./src/cpp/server/CMakeLists.txt.orig	2013-12-13 18:38:16.000000000 -0500
-+++ ./src/cpp/server/CMakeLists.txt	2013-12-13 18:38:42.000000000 -0500
-@@ -130,7 +130,7 @@
+--- src/cpp/server/CMakeLists.txt.orig	2015-03-06 22:12:51 UTC
++++ src/cpp/server/CMakeLists.txt
+@@ -101,7 +101,7 @@ configure_file(${CMAKE_CURRENT_SOURCE_DI
+                ${CMAKE_CURRENT_BINARY_DIR}/server-config.h)
+ 
+ # required on Fedora for AppArmor-related code to compile
+-if(NOT APPLE)
++if(NOT APPLE AND NOT (${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD"))
+    find_library(DL_LIBRARIES dl)
+ endif()
+ 
+@@ -133,7 +133,7 @@ target_link_libraries(rserver 
  # install binary
  install(TARGETS rserver DESTINATION ${RSTUDIO_INSTALL_BIN})
  

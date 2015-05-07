@@ -1,5 +1,5 @@
---- ./src/cpp/core/system/PosixChildProcess.cpp.orig	2013-12-13 11:18:24.000000000 -0500
-+++ ./src/cpp/core/system/PosixChildProcess.cpp	2013-12-13 11:19:09.000000000 -0500
+--- src/cpp/core/system/PosixChildProcess.cpp.orig	2015-03-06 22:12:51 UTC
++++ src/cpp/core/system/PosixChildProcess.cpp
 @@ -23,6 +23,11 @@
  #include <util.h>
  #include <sys/ttycom.h>

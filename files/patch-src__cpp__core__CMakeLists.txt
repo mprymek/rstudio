@@ -1,6 +1,6 @@
---- ./src/cpp/core/CMakeLists.txt.orig	2013-12-13 14:50:22.000000000 -0500
-+++ ./src/cpp/core/CMakeLists.txt	2013-12-13 14:52:22.000000000 -0500
-@@ -123,6 +123,12 @@
+--- src/cpp/core/CMakeLists.txt.orig	2015-03-06 22:12:51 UTC
++++ src/cpp/core/CMakeLists.txt
+@@ -126,6 +126,12 @@ if (UNIX)
     check_symbol_exists(SA_NOCLDWAIT "signal.h" HAVE_SA_NOCLDWAIT)
     check_symbol_exists(SO_PEERCRED "sys/socket.h" HAVE_SO_PEERCRED)
     check_function_exists(inotify_init1 HAVE_INOTIFY_INIT1)
@@ -13,7 +13,7 @@
     check_function_exists(getpeereid HAVE_GETPEEREID)
     check_function_exists(setresuid HAVE_SETRESUID)
     if(EXISTS "/proc/self")
-@@ -155,6 +161,10 @@
+@@ -158,6 +164,10 @@ if (UNIX)
        ${CORE_SERVICES_LIBRARY}
     )
  

@@ -1,5 +1,5 @@
---- ./src/cpp/core/include/core/r_util/RTokenizer.hpp.orig	2013-12-13 11:17:24.000000000 -0500
-+++ ./src/cpp/core/include/core/r_util/RTokenizer.hpp	2013-12-13 11:17:41.000000000 -0500
+--- src/cpp/core/include/core/r_util/RTokenizer.hpp.orig	2015-03-06 22:12:51 UTC
++++ src/cpp/core/include/core/r_util/RTokenizer.hpp
 @@ -25,7 +25,7 @@
  #include <boost/regex_fwd.hpp>
  
