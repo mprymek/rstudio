@@ -44,16 +44,27 @@ PANDOCVER=	1.13.1
 SHINYAPPSVER=	0.98.1000
 
 #USE_GCC=	yes
-USE_FORTRAN=	no
-#USE_JAVA=	yes
-#JAVA_BUILD=	yes
+USE_FORTRAN=	yes
+
+USE_JAVA=       yes
+JAVA_VERSION=   1.7+
+JAVA_VENDOR=    openjdk
+JAVA_BUILD=     yes
+
+#USE_RC_SUBR= rstudio_server
+#SUB_FILES= rserver.conf.sample rsession.conf.sample
+
+#USERS= rstudio-server
+#GROUPS= rstudio-server
+
 USES=		cmake:outsource
+CMAKE_INSTALL_PREFIX= ${PREFIX}
 CMAKE_VERBOSE= yes
 CMAKE_ARGS+=	-DRSTUDIO_TARGET=Server \
 		-DCMAKE_BUILD_TYPE=Release \
 		-DRSTUDIO_INSTALL_SUPPORTING=${PREFIX}/lib \
 		-DRSTUDIO_INSTALL_BIN=${PREFIX}/sbin
-NO_STAGE=	yes
+#NO_STAGE=	yes
 
 GINFILES=	LICENSE README aopalliance.jar gin-${GINVER}-post-gwt-2.2.jar \
 		gin-${GINVER}-pre-gwt-2.2.jar guice-assistedinject-snapshot.jar \
