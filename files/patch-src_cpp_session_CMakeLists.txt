@@ -1,0 +1,11 @@
+--- src/cpp/session/CMakeLists.txt.orig	2015-03-06 22:12:51 UTC
++++ src/cpp/session/CMakeLists.txt
+@@ -262,6 +262,8 @@ endif()
+ # define executable
+ add_executable(rsession ${SESSION_SOURCE_FILES} ${SESSION_HEADER_FILES})
+ 
++set(SESSION_SYSTEM_LIBRARIES ${SESSION_SYSTEM_LIBRARIES} -L/usr/local/lib/gcc48/ -lquadmath)
++
+ # set link dependencies
+ if(WIN32)
+    set(RSTUDIO_CORE_ZLIB rstudio-core-zlib)

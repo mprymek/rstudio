@@ -43,8 +43,8 @@ JAXVER=		23
 PANDOCVER=	1.13.1
 SHINYAPPSVER=	0.98.1000
 
-USE_GCC=	yes
-USE_FORTRAN=	yes
+#USE_GCC=	yes
+USE_FORTRAN=	no
 #USE_JAVA=	yes
 #JAVA_BUILD=	yes
 USES=		cmake:outsource
